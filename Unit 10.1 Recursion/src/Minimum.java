@@ -33,8 +33,6 @@ public class Minimum
         else
             arr.remove(arr.size()-2);
 
-
-
         return minimum(arr);
     }
 
