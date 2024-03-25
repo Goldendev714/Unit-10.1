@@ -8,12 +8,11 @@ public class Countdown
 
     private static String countdown(int num)
     {
-        String total = num + " ";
         // BASE CASE
         if(num == 1 || num == 2)
-            return total + "Blastoff!";
+            return " Blastoff!";
 
 
-        return total + (countdown(num - 2));
+        return " " + num + (countdown(num - 2));
     }
 }
