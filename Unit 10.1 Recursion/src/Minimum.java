@@ -24,14 +24,17 @@ public class Minimum
 
     public static int minimum(ArrayList<Integer> arr)
     {
+        int arrSize = arr.size();
+        int arrSizeMin = arr.size()-1;
+
         // BASE CASE
-        if(arr.size() - 1 == 0)
+        if(arrSize == 1)
             return arr.get(0);
 
-        if(arr.get(arr.size()-1) > arr.get(arr.size()-2))
-            arr.remove(arr.size()-1);
+        if(arr.get(arrSizeMin) > arr.get(arrSizeMin-1))
+            arr.remove(arrSizeMin);
         else
-            arr.remove(arr.size()-2);
+            arr.remove(arrSizeMin-1);
 
         return minimum(arr);
     }
